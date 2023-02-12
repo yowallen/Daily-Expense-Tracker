@@ -1,0 +1,133 @@
+.signSect{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to top, #205375, #2f4967, #364058, #363849, #33313b);
+}
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 50px;
+    border-radius: 5px;
+    max-width: 1020px;
+    box-shadow: 12px 12px 22px #33313b;
+    .title{
+        font-family: 'Lobster';
+        font-size: 32px;
+        padding: 10px;
+        font-weight: 600;
+        color: $secColor;
+    }
+}
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    legend{
+        font-size: 26px;
+        font-family: 'Poppins';
+        font-weight: 500;
+        color: $secColor;
+    }
+}
+.input-box{
+    margin-bottom: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    span{
+        font-size: 20px;
+    }
+    input{
+        height: 45px;
+        width: 400px;
+        font-size: 16px;
+        padding-left: 16px;
+        caret-color: $mainColor;
+        outline: none;
+        border-radius: 5px;
+        border-width: 1px 1px 2px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        transition: all 0.3s ease 0s;
+    }
+}
+.btnSignIn{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px 0px;
+    color: #fff;
+    height: 45px;
+    input{
+        height: 100%;
+        width: 885px;
+        color: #fff;
+        font-size: 18px;
+        background-color: $mainColor;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border-radius: 5px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            background-color: $secColor;
+        }
+    }
+}
+.gender-detail{
+    margin-bottom: 15px;
+    flex-direction: column;
+    display: flex;
+    label{
+        font-size: 20px;
+    }
+    select, option{
+        height: 45px;
+        width: 400px;
+        font-size: 16px;
+        
+    }
+}
+@media only screen and (max-width: 768px){
+    .container, fieldset, section{
+        width: 100%;
+        height: 100%;
+    }
+    .input-box, .gender-detail{
+        width: 100%;
+        display: block;
+    }
+    .btnSign{
+        width: 400px;
+        margin: 0px 90px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .container, fieldset, section{
+        width: 100%;
+        height: 100%;
+    }
+    .input-box, .gender-detail{
+        width: 100%;
+        display: block;
+    }
+    .btnSign{
+        width: 400px;
+    }
+}
+.logLink{
+    margin: 20px 0px;
+    text-align: center;
+}

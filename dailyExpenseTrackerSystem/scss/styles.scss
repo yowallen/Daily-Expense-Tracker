@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import "header";
+@import "signform";
+@import "teampage";
+@import "footer";
+$mainColor: #205375;
+$secColor: #33313B;
+$thirdColor: rgb(248, 249, 250);
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+.myTitles{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin: 25px 0px;
+    h1{
+        font-family: 'Lobster';
+        color: $secColor;
+        font-size: 34px;
+        font-weight: 500;
+    }
+}
+.incInputs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    label{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    input{
+        font-size: 16px;
+        padding-left: 10px;
+        width: 400px;
+    }
+}
+#source{
+    margin-left: 13px;
+}
+.incCont{
+    background-color: #EBEBEB;
+    margin: 20px 70px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.incTransac{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    button{
+        background-color: $mainColor;
+        color: #fff;
+        padding: 7px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: $secColor;
+        }
+    }
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    border-radius: 10px;
+    fieldset{
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #dc3545;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .incSubmit{
+      margin-top: 15px;
+      justify-content: center;
+      display: flex;
+      input{
+          padding: 5px 10px;
+          background-color: #198754;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          &:hover{
+              background-color: #337657;
+          }
+      }
+  }
+.cat{
+    margin: 10px 0px;
+    span{
+        font-weight: 600;
+        color: $secColor;
+    }
+}
+.cat-list{
+    margin: 10px 0px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 5px;
+}

@@ -1,0 +1,108 @@
+$mainColor: #205375;
+$secColor: #33313B;
+$thirdColor: rgb(248, 249, 250);
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: $thirdColor;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px 0 70px;
+    flex-wrap: wrap;
+    .logo{
+        color: $secColor;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Lobster';
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+      }
+      ul li{
+        margin: 0 5px;
+      }
+      ul li a{
+        color: $secColor;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        opacity: 0.7;
+      }
+      ul li a:hover{
+        background: $mainColor;
+        color: #fff;
+        opacity: 1;
+      }
+      ul li a.active{
+        color: #fff;
+        background: $secColor;
+        opacity: 1;
+        &:hover{
+          background: $mainColor;
+          color: #fff;
+        }
+      }
+      .menu-btn i{
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+      }
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  
+  @media (max-width: 1061px) {
+    nav .menu-btn i{
+      display: block;
+      color: $secColor;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+      
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    #click:checked ~ ul{
+      left: 0;
+      color: $secColor;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  }

@@ -1,0 +1,694 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: rgb(248, 249, 250);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px 0 70px;
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: #33313B;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Lobster";
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #33313B;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+nav ul li a:hover {
+  background: #205375;
+  color: #fff;
+  opacity: 1;
+}
+nav ul li a.active {
+  color: #fff;
+  background: #33313B;
+  opacity: 1;
+}
+nav ul li a.active:hover {
+  background: #205375;
+  color: #fff;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+@media (max-width: 1061px) {
+  nav .menu-btn i {
+    display: block;
+    color: #33313B;
+  }
+
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  #click:checked ~ ul {
+    left: 0;
+    color: #33313B;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+
+  nav ul li a.active,
+nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+.signSect {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to top, #205375, #2f4967, #364058, #363849, #33313b);
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 25px 50px;
+  border-radius: 5px;
+  max-width: 1020px;
+  box-shadow: 12px 12px 22px #33313b;
+}
+.cont .title {
+  font-family: "Lobster";
+  font-size: 32px;
+  padding: 10px;
+  font-weight: 600;
+  color: #33313B;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+fieldset legend {
+  font-size: 26px;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #33313B;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+}
+.input-box span {
+  font-size: 20px;
+}
+.input-box input {
+  height: 45px;
+  width: 400px;
+  font-size: 16px;
+  padding-left: 16px;
+  caret-color: #205375;
+  outline: none;
+  border-radius: 5px;
+  border-width: 1px 1px 2px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  -o-border-image: initial;
+     border-image: initial;
+  transition: all 0.3s ease 0s;
+}
+
+.btnSignIn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 15px 0px;
+  color: #fff;
+  height: 45px;
+}
+.btnSignIn input {
+  height: 100%;
+  width: 885px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #205375;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  -o-border-image: initial;
+     border-image: initial;
+  transition: all 0.3s ease 0s;
+}
+.btnSignIn input:hover {
+  background-color: #33313B;
+}
+
+.gender-detail {
+  margin-bottom: 15px;
+  flex-direction: column;
+  display: flex;
+}
+.gender-detail label {
+  font-size: 20px;
+}
+.gender-detail select, .gender-detail option {
+  height: 45px;
+  width: 400px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container, fieldset, section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .input-box, .gender-detail {
+    width: 100%;
+    display: block;
+  }
+
+  .btnSign {
+    width: 400px;
+    margin: 0px 90px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container, fieldset, section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .input-box, .gender-detail {
+    width: 100%;
+    display: block;
+  }
+
+  .btnSign {
+    width: 400px;
+  }
+}
+.logLink {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.team-section {
+  background-image: radial-gradient(circle, #205375, #2f4967, #364058, #363849, #33313b);
+  padding: 70px 15px 30px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-section .section-title {
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-bottom: 70px;
+}
+
+.team-section .section-title h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Lobster";
+}
+
+.team-section .section-title p {
+  font-size: 16px;
+  text-align: center;
+  margin: 15px 0 0;
+  color: #fff;
+}
+
+.team-section .team-items {
+  flex-basis: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-section .team-items .item {
+  flex-basis: calc(25% - 30px);
+  max-width: calc(25% - 30px);
+  transition: all 0.5s ease;
+  margin-bottom: 40px;
+}
+
+.team-section .team-items .item img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.team-section .team-items .item .inner {
+  position: relative;
+  z-index: 11;
+  padding: 0 15px;
+}
+
+.team-section .team-items .item .inner .info {
+  background-color: #33313B;
+  text-align: center;
+  padding: 20px 15px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  margin-top: -40px;
+}
+
+.team-section .team-items .item:hover .info {
+  transform: translateY(-20px);
+}
+
+.team-section .team-items .item:hover {
+  transform: translateY(-10px);
+}
+
+.team-section .team-items .item .inner .info h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: "Lobster";
+}
+
+.team-section .team-items .item .inner .info p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c5c5c5;
+  margin: 10px 0 0;
+}
+
+.team-section .team-items .item .inner .info .social-links {
+  padding-top: 15px;
+}
+
+.team-section .team-items .item .inner .info .social-links a {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background-color: #ffffff;
+  color: #205375;
+  border-radius: 50%;
+  margin: 0 2px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+.team-section .team-items .item .inner .info .social-links a:hover {
+  box-shadow: 0 0 10px #000;
+}
+
+/*responsive*/
+@media (max-width: 991px) {
+  .team-section .team-items .item {
+    flex-basis: calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+@media (max-width: 767px) {
+  .team-section .team-items .item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.footer {
+  background-color: #33313B;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.footer .contOne {
+  margin: 0px 70px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer .contOne h4 {
+  padding: 10px 0px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer .contOne p {
+  text-align: justify;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#foot hr {
+  margin: 0px 70px;
+}
+#foot .contTwo {
+  background-color: #33313B;
+  padding: 15px 0px;
+  text-align: center;
+}
+#foot .contTwo i {
+  color: #fff;
+  font-size: 10px;
+}
+#foot .contTwo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  padding-left: 5px;
+  font-family: "Lobster";
+}
+#foot .contTwo p {
+  color: #fff;
+  font-size: 11px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.btnSign {
+  margin: 15px;
+}
+.btnSign .button {
+  border-radius: 4px;
+  background-color: var(--second-color);
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btnSign .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  background-color: var(--second-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+.btnSign .button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: white;
+  background-color: white;
+}
+.btnSign .button:hover span {
+  padding-right: 25px;
+  background-color: white;
+  color: black;
+}
+.btnSign .button:hover span:after {
+  opacity: 1;
+  right: 0;
+  background-color: white;
+  color: black;
+}
+.btnSign .button:hover {
+  background-color: white;
+}
+.btnSign .home-link {
+  color: var(--second-color);
+  background-color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.qlinks {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0px;
+}
+.qlinks p {
+  font-weight: 500;
+  font-size: 18px;
+}
+.qlinks ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.qlinks ul li {
+  margin: 0px 5px;
+}
+.qlinks ul li a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Lobster";
+}
+.qlinks ul li a:hover {
+  color: #205375;
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .contOne {
+    margin: 0px 0px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.myTitles {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0px;
+}
+.myTitles h1 {
+  font-family: "Lobster";
+  color: #33313B;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.incInputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.incInputs label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.incInputs input {
+  font-size: 16px;
+  padding-left: 10px;
+  width: 400px;
+}
+
+#source {
+  margin-left: 13px;
+}
+
+.incCont {
+  background-color: #EBEBEB;
+  margin: 20px 70px;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.incTransac {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+.incTransac button {
+  background-color: #205375;
+  color: #fff;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.incTransac button:hover {
+  background-color: #33313B;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 10px;
+}
+.modal-content fieldset {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #dc3545;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.incSubmit {
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+}
+.incSubmit input {
+  padding: 5px 10px;
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.incSubmit input:hover {
+  background-color: #337657;
+}
+
+.cat {
+  margin: 10px 0px;
+}
+.cat span {
+  font-weight: 600;
+  color: #33313B;
+}
+
+.cat-list {
+  margin: 10px 0px;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 5px;
+}/*# sourceMappingURL=styles.css.map */

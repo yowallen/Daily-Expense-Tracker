@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Login</title>
+    <style>
+        body{
+            background-color: rgb(219, 226, 226);
+            font-family: 'Montserrat';
+        }
+        .row{
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 12px 12px 22px grey;
+        }
+        img{
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        h1{
+            font-weight: 600;
+            font-family: 'Lobster';
+            color: #33313B;
+        }
+        h4{
+            font-family: 'Poppins';
+            color: #33313B;
+        }
+        .btnLog{
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            background-color: #205375;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .btnLog:hover{
+            background-color: #33313B;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="Form my-4 mx-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-5">
+                    <img src="scss/media/logpic.png" class="img-fluid" alt="calculator" width="440px"">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="py-5">
+                        Daily Expense Tracker
+                    </h1>
+                    <h4>Log into your account</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input type="email" class="form-control my-3 p-3" placeholder="User ID">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <input type="password" class="form-control my-3 p-3" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-7">
+                                <button type="button" class="btnLog mb-5">Login</button>
+                            </div>
+                        </div>
+                        <p>Don't have an account? <a href="signup.html">Sign Up Here</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

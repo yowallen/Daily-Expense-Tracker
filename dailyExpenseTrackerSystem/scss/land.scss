@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import "variables";
+@import "carousel";
+@import "footer";
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.greet{
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+    font-size: 30px;
+}
+.imgCol{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $mainColor;
+  justify-content: space-evenly;
+  
+}
+.detCol, .userCol, .logCol{
+  color: #fff;
+  margin: 40px 0px 40px 0px;
+  padding: 0px 70px 0px 70px;
+  text-align: justify;
+  font-size: 14px;
+  width: 32%;
+  flex-wrap: wrap;
+  display: flex;
+  flex: wrap;
+  p{
+    opacity: .8;
+  }
+  h4{
+    font-size: 16px;
+    margin: 5px 0px;
+  }
+}
+#about{
+  background-color: rgb(219, 226, 226);
+  flex: wrap;
+  display: flex;
+  width: 100%;
+  padding: 10px 0px;
+}
+.left{
+  margin: 70px 15px 70px 140px;
+}
+.right{
+  margin: 80px 10px 50px 15px;
+  h2{
+    margin-bottom: 15px;
+  }
+  p{
+    text-align: justify;
+    margin-right: 70px;
+    opacity: .8;
+  }
+}
+@media (max-width: 1200px){
+  .left{
+    width: 100%;
+  }
+  #about{
+    flex-wrap: wrap;
+  }
+  .right{
+    text-align: center;
+    margin: 0px;
+    p{
+      align-items: center;
+      justify-content: center;
+      margin: 30px
+    }
+  }
+  .imgCol{
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 100%;
+  }
+  .detCol, .userCol, .logCol{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .contOne{
+    padding: 0px;
+    width: 100%;
+    margin: auto;
+    p{
+      margin: 0px 0px;
+      width: 100%;
+      
+    }
+  }
+    
+}

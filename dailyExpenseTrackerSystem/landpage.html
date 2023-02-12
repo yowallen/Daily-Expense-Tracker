@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="scss/land.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+           My Expense Tracker
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+           <li><a href="#about">About</a></li>
+           <li><a href="teampage.html">Our Team</a></li>
+           <li><a href="login.html">Login</a></li>
+           <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+     </nav>
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="scss/media/car2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="scss/media/car1.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="scss/media/car3.jpg" style="width:100%">
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+        </div>
+        <br>
+        <p class="greet">WELCOME TO DAILY EXPENSE TRACKER!</p>
+       
+        <div class="imgCol" data-aos="fade-up">
+          <div class="detCol"  data-aos="fade-left">
+            <img src="scss/media/landpic1.jpg" width="350px" alt="About what is Daily Expense Tracking System">
+            <h4>
+              Daily Expense Tracking System
+            </h4>
+            <p>
+              Expense Tracking refers to the system deployed by a 
+              process, pay, and audit user-initiated expenses.
+              Software to manage the expense claim.
+            </p>
+          </div>
+          <div class="userCol">
+            <img src="scss/media/landpic2.jpg" width="350px" alt="About what is User Management">
+            <h4>
+              User Managment System
+            </h4>
+            <p>
+              Software to manage the expense claim, authorization
+              audit and payment process can be obtained from organization
+              that provide a licensed software.
+            </p>
+          </div>
+          <div class="logCol"  data-aos="fade-right">
+            <img src="scss/media/landpic3.jpg" width="350px" alt="About what is Login Management">
+            <h4>
+              Login Management System
+            </h4>
+            <p>
+              Typical manual process will involve an user
+              completing a paper, spreadsheet, or Graphical
+              User Inteface-based expense report that they
+              then can forward.
+            </p>
+          </div>
+        </div>
+
+        <div id="about" data-aos="flip-up">
+          <div class="left">
+            <img src="scss/media/aboutpic.jpg" width="450" alt="Computers">
+          </div>
+          <div class="right">
+            <h2>
+              About Daily Expense Tracker System
+            </h2>
+            <p>
+              Daily Expense Tracker is a comprehensive business solution with a primary focus on cost-cutting and time management, two critical components in the success of any project. It primarily comprises of a spending management application that allows you to save money in many areas. Each capability ensures system consistency, for example, if a user saves details from either the web or mobile, report consistency is maintained. It also provides the appropriate expenditure information that has been recorded in the database. This system performs a wide range of jobs. Saving money by category, organizing tasks, changing wallpaper, and so on are a few examples. There is an option to examine reports on a weekly, daily, and monthly basis.
+              The Daily Expense Tracker has been built and modified with the needs of the anticipated consumers in mind, such as students and businessmen of any firm, to assist users in saving money in the future by evaluating the reports of this expert system.
+            </p>
+          </div>
+        </div>
+
+        <footer id="foot">
+         <div class="footer">
+          <div class="contOne">
+            <h4>
+              ABOUT PROJECT
+            </h4>
+            <p>
+              Expense management refers to the systems deployed by a process, pay, and audit user-initiated expenses.
+              These costs include, but are limited to expenses for tavelling and entertainment. Expense management
+              includes the the policies and procedures that govern such spending, as well as the technology and
+              services and analyze the data associated with it.
+            </p>
+            <div class="btnSign">
+              <a href="signup.html" class="home-link"><button class="button"><span>Click Me to Start</span></button></a>
+            </div>
+          </div>
+          <hr>
+          <div class="contTwo">
+              <p><i class="far fa-copyright"></i>
+                <a href="#">Daily Expense Tracker System</a>
+                <sup><i class="fas fa-trademark"></i></sup>
+                (2022) powered by: <Strong> Group 6</Strong></p>
+          </div>
+         </div>
+         
+        </footer>
+        
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+              $('#foot').css({
+                  display: 'none'
+                });
+                $('#foot').show(3000);
+            });
+        </script>
+
+</body>
+
+<script>
+  let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 4500); // Change image every 2 seconds
+          }
+</script>
+
+</html>

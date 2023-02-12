@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/styles.css">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <section class="signSect">
+        <div class="cont">
+            <div class="title">My Expense Tracker Account</div>
+            <div class="content">
+                <form action="#">
+                    <fieldset>
+                        <legend>Registration</legend>
+                        <div class="input-box">
+                            <span class="detail">Full Name</span>
+                            <input type="text" placeholder="Enter your Name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detail">Email</span>
+                            <input type="text" placeholder="Enter your Email Address" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detail">Username</span>
+                            <input type="text" placeholder="Enter your Username" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="detail">Password</span>
+                            <input type="password" placeholder="Enter Password" required>
+                        </div>
+                        <div class="gender-detail">
+                            <label for="identity">Gender</label>
+                            <select name="identity" id="identity" required>
+                                <option value="" disabled selected hidden>Select Gender Identity</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Attack Helicopter</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <span class="detail">Confirm Password</span>
+                            <input type="password" placeholder="Confirm your Password" required>
+                        </div>
+                        <div class="btnSignIn">
+                            <input type="submit" value="Register">
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="logLink">
+                    <span>
+                        Already have an account? <a href="login.html">Log In Here</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
